@@ -1,0 +1,11 @@
+// course.poster luôn luôn là link hình ảnh vì đó là course có sẵn
+        // courseEdit.poster có 2 trường hợp :
+        // + link hình ảnh hoặc file mới upload
+        if (course.poster !== courseEdit.poster) {
+          // nếu có upload file mới (khác với link hình ảnh)
+
+          poster_url = uploadFile(courseEdit.poster.file.originFileObj);
+        } else {
+          // ko upload file mới , giữ nguyên link hình ảnh cũ
+          poster_url = course.poster;
+        }
